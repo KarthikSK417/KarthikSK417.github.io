@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.socialmedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+.soc{
+    position: relative;
+    display: flex;
+}
+
+.soc li{
+    list-style: none;
+}
+
+.soc li::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,calc(-50% + 120px));
+    font-size: 14vw;
+    pointer-events: none;
+    font-weight: 700;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.soc li:hover::before{
+    opacity: 0.1;
+    transform: translate(-50%, calc(-50% + 150px));
+}
+
+.soc li a{
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+    transition: background 0.25s;
+}
+
+.soc li a:hover.facebook{
+    background: #1877f2;
+}
+
+.soc li a:hover.instagram{
+    background: #e4405f;
+}
+
+.soc li a:hover.linkedin{
+    background: #075fd3;
+}
+
+.soc li a:hover.twitter{
+    background: #0099ff;
+}
+
+.soc li a .fa{
+    transition: 0.25s;
+    pointer-events: none;
+}
+
+.soc li a:hover .fa{
+    color: #fff;
+    transform: scale(1.75) translateZ(50px);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Social Media Profiles</title>
+    <link rel="stylesheet" href="social.css">
+    <link rel="icon" type="image/x-icon" href="human.png">
+</head>
+<body>
+    <section class="socialmedia">
+        <ul class="soc">
+            <li data-text="Facebook" data-color="#1877f2">
+                <a href="not1.html" class="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li data-text="Instagram" data-color="#e4405f">
+                <a href="not.html" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li data-text="LinkedIn" data-color="#075fd3">
+                <a href="https://www.linkedin.com/in/skdkkarthik1234/" class="linkedin" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li data-text="Twitter" data-color="#0099ff">
+                <a href="not2.html" class="twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="vanilla-tilt.js"></script>
+
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".soc li a"),{
+    max: 25,
+    speed: 400,
+    glare: true,
+    "max-glare": 1,
+});
+    </script>
+
+    <script>
+        let list = document.querySelectorAll('.soc li');
+        let bg = document.querySelector('.socialmedia');
+        list.forEach(elements =>{
+            elements.addEventListener('mouseenter', function(event){let color
+            = event.target.getAttribute('data-color');
+            bg.style.backgroundColor = color;
+            })
+
+            elements.addEventListener('mouseleave', function(event){
+            bg.style.backgroundColor = '#fff';
+            })
+        })
+    </script>
+
+</body>
+</html>
