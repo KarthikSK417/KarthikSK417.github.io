@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="hello.css">
+        <link rel="icon" type="image/x-icon" href="human.png">
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Name = "SK Karthik"
+                <br>print(Name)
+            </a>
+            <div class="menutoggle"></div>
+            <ul class="nav">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
+        
+        <section id="home">
+            <div class="text">
+                <div class="slogan">
+                <h1><span>Ka</span>rthik <span>SK</span></h1>
+                </div>
+                <p>
+                    <span>Hello!</span> I am <span>Karthik</span>. I have knowledge in <span>Full Stack Development</span>, UX/UI Design, <span>Video Editing</span>, Artificial Intelligence, <span>Machine Learning</span> and Data Science.
+                </p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+
+            <img src="human.png" class="human">
+
+        </section>
+
+        <section id="services">
+            <div class="fish">
+                <h2 class="brocolli">Here is What I do</h2>
+                <h2 class="brocolli">Here is What I do</h2>
+            </div>
+            <div class="text">
+
+                <div class="box">
+                    <img src="uxui.png" class="veg">
+                    <h3>UX/UI Design</h3>
+                </div>
+
+                <div class="box">
+                    <img src="WEB.png" class="veg">
+                    <h3>Full Stack Development</h3>
+                </div>
+
+                <div class="box">
+                    <img src="DATA.png" class="veg">
+                    <h3>AI, ML and Data Science</h3>
+                </div>
+
+                <div class="box">
+                    <img src="video.png" class="veg">
+                    <h3>Video Editing</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="portfolio">
+
+            <div class="b1">
+            
+            <div class="con">
+
+                <div class="slogan">
+                    <h1>Here is my some of the <span>Projects</span></h1>
+                    </div>
+
+                <div class="menu">
+                    <div class="text123">
+                        <h2 class="biriyani">#1</h2>
+                        <h3 class="biriyani1">E - Commerce Website</h3>
+                        <p class="biriyani2">I had Built a E - Commerce Store for the Sample Work with HTML, CSS AND Javascript with React.js and backend libraries(Node.js).</p>
+                        <a href="#" class="a1">Sample Project</a>
+                    </div>
+                </div>
+    
+                <div class="menu">
+                    <div class="text123">
+                        <h2 class="biriyani">#2</h2>
+                        <h3 class="biriyani1">Full Stack Messaging App</h3>
+                        <p class="biriyani2">I am Currently building a full stack messaging app with javascript(react.js) and PHP and also Mysql.
+                        </p>
+                        <a href="#" class="a1">Sample Project</a>
+                    </div>
+                </div>
+    
+                <div class="menu">
+                    <div class="text123">
+                        <h2 class="biriyani">#3</h2>
+                        <h3 class="biriyani1">Some Project based with Computervision</h3>
+                        <p class="biriyani2">I had built some of the projects based with Computervision and NLP.
+                        </p>
+                        <a href="#" class="a1">Sample Project</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </section>
+
+        <section id="contact">
+            <div class="con3">
+                <h2 class="dosa">
+                    <span class="paneer">C</span><span class="paneer">o</span><span class="paneer">n</span><span class="paneer">t</span><span class="paneer">a</span><span class="paneer">c</span><span class="paneer">t</span> <span class="paneer">M</span><span class="paneer">e</span>
+                </h2>
+            </div>
+            <div class="text">
+                <a href="email.html" target="_blank">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    E - Mail
+                </a>
+
+                <a href="media.html" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    Social Media
+                </a>
+
+                <a href="form.html" target="_blank">
+                    <ion-icon name="document-text-outline"></ion-icon>
+                    Form
+                </a>
+            </div>
+        </section>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+    let list = document.querySelectorAll('.nav li');
+    function active(){
+        list.forEach((i) =>
+        i.classList.remove('active'));
+        this.classList.add('active');
+    }
+
+    list.forEach((i) =>
+    i.addEventListener('click' ,active));
+
+    let menutoggle = document.querySelector('.menutoggle');
+    let header = document.querySelector('header');
+    menutoggle.onclick = function(){
+        header.classList.toggle('active');
+    }
+</script>
+
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".menu"),{
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+	});
+</script>
+        
+
+    </body>
+</html>
